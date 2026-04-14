@@ -54,6 +54,16 @@ a{color:inherit;text-decoration:none}
 .button:hover{transform:translateY(-1px)}
 .button-primary{color:#4d2815;background:linear-gradient(180deg, #f1d7ad, #e0bb7c);box-shadow:0 12px 30px rgba(25,11,5,.22)}
 .button-secondary{border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.07);color:#f7e7c8}
+.paper-card .button-secondary{
+  background:rgba(77,40,21,.08);
+  border-color:rgba(122,73,33,.34);
+  color:var(--ink);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.22);
+}
+.paper-card .button-secondary:hover{
+  background:rgba(77,40,21,.11);
+  border-color:rgba(122,73,33,.44);
+}
 
 .hero-visual{position:relative;display:flex;align-items:center;justify-content:center;min-height:640px}
 .glow{
