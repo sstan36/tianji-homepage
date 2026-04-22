@@ -22,6 +22,6 @@ Then visit `http://localhost:8000`.
 ## Before publishing
 
 - Replace `support@yourdomain.com` in `support.html`
-- Replace the App Store `href="#"` links with the real App Store URL
+- Ensure the App Store links point to `https://apps.apple.com/us/app/tianji-bazi-destiny/id6761753338`
 - Replace the placeholder `assets/*.svg` with real screenshots
 
