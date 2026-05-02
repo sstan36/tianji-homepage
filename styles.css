@@ -324,6 +324,32 @@ a{color:inherit;text-decoration:none}
 
 .site-footer{margin-top:36px;padding:28px 0 46px;border-top:1px solid rgba(255,255,255,.08);color:#efd8b4}
 .footer-inner{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap}
+.footer-meta{display:flex;flex-direction:column;gap:12px;min-width:min(100%,220px)}
+.footer-social{
+  display:flex;flex-wrap:wrap;gap:12px 18px;
+  margin:0;padding:0;list-style:none;
+}
+.footer-social a{
+  display:inline-flex;align-items:center;gap:8px;
+  color:#efd8b4;font-size:15px;font-family:'Inter',system-ui,sans-serif;
+  text-decoration:none;border-radius:8px;
+  transition:color .18s ease, opacity .18s ease;
+}
+.footer-social a:hover{color:#fff8e8}
+.footer-social a:focus-visible{
+  outline:2px solid rgba(255,220,180,.65);
+  outline-offset:3px;
+}
+.footer-social__icon{
+  flex-shrink:0;
+  display:block;
+  width:22px;
+  height:22px;
+  object-fit:contain;
+  border-radius:6px;
+  opacity:.95;
+}
+.footer-social a:hover .footer-social__icon{opacity:1}
 .footer-links{display:flex;gap:16px;flex-wrap:wrap;font-family:'Cinzel',serif}
 .simple-hero{padding:72px 0 24px;text-align:center}
 .simple-hero h1{
@@ -670,6 +696,8 @@ body.page-feature .site-footer{
   color:#d4c4a8;
 }
 body.page-feature .footer-links a{color:#e8d4b0}
+body.page-feature .footer-social a{color:#e8d4b0}
+body.page-feature .footer-social a:hover{color:#fff8e8}
 
 @media (max-width:980px){
   .coming-soon-banner{
