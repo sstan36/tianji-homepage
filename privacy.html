@@ -33,19 +33,17 @@
     <div class="container paper-card">
       <div class="paper-inner">
         <h2 class="section-title">Privacy Policy</h2>
-        <p class="section-copy">TianJi (Firebase iOS): BaZi (Four Pillars) chart application</p>
+        <p class="section-copy">TianJi — BaZi (Four Pillars) chart application for iOS</p>
 
         <div class="policy">
           <div class="policy-meta text-card">
             <dl>
               <dt>Controller</dt>
               <dd>Michael Tan (“we”, “us”, “our”)</dd>
-              <dt>Bundle identifier</dt>
-              <dd><code>com.nexazenith.FirebaseApi</code></dd>
               <dt>Effective date</dt>
               <dd>30 March 2026</dd>
               <dt>Last updated</dt>
-              <dd>5 April 2026</dd>
+              <dd>10 July 2026</dd>
             </dl>
           </div>
 
@@ -61,56 +59,20 @@
           <p><strong>Apple.</strong> TianJi is distributed through the Apple App Store. We comply with applicable Apple program and review requirements, including accurate completion of App Store privacy details (such as the privacy “nutrition label” and data use declarations), permission usage, account rules, and the agreements that govern the App. See <a href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer">Apple Privacy Policy</a> for Apple’s own data practices, and <a href="https://developer.apple.com/app-store/review/guidelines/" rel="noopener noreferrer">App Store Review Guidelines</a> for rules that affect app behaviour. If an App Store listing, label, or Apple requirement conflicts with an older copy of this Policy, follow the App Store presentation and Apple’s published rules for distribution, and contact us if something looks inconsistent.</p>
 
           <h2>Summary</h2>
-          <p><strong>What the App does today.</strong> The App is built around BaZi (Four Pillars) chart generation and related features we ship in the store build. Narrative or generative “reading” features are not part of the current public product described in detail here; if we add them later, we will update this Policy and App Store disclosures first.</p>
+          <p><strong>What the App does today.</strong> The App provides BaZi (Four Pillars) chart generation and related features, including optional AI-assisted consultant readings described in Section 6.</p>
           <p><strong>No ads, no sale of personal data.</strong> We do not show ads from third parties. We do not sell personal information. We do not use your information for tracking across apps or across websites for advertising.</p>
-          <p><strong>No analytics or crash reporting (current).</strong> We do not use Firebase Analytics, Crashlytics, or other analytics or crash reporting services provided by third parties in the App at this time.</p>
-          <p><strong>No push or Remote Config.</strong> We do not use Firebase Cloud Messaging (push notifications), Firebase Remote Config, AdMob, or similar advertising or tracking SDKs.</p>
-          <p><strong>Backend.</strong> We use Firebase Cloud Functions, Firestore, Firebase App Check with Apple App Attest on supported devices, and Firebase Anonymous Authentication (pseudonymous ID per installation for backend calls). We use secure secret storage on the server to keep confidential credentials off the device and out of the client app.</p>
-          <p><strong>Minimal processing.</strong> We process information only to operate the App (charts, optional purchases, security, reliability, and support you start). We do not ask for access to your contacts, photo library, or precise location for chart features.</p>
-          <p><strong>Support diagnostics.</strong> If you use Contact support in Settings, you may send a short diagnostic excerpt from your device and basic device or app metadata only in that email. We design the log not to include birth details, raw chart JSON, or similar content unless you put them in the email body. See the support section below.</p>
+          <p><strong>No analytics or crash reporting (current).</strong> We do not use third-party analytics or crash-reporting services in the App at this time.</p>
+          <p><strong>No push notifications or advertising SDKs.</strong> We do not send push notifications and do not use advertising or tracking SDKs.</p>
+          <p><strong>Online services.</strong> Some features use our online backend (hosted by Google) and, for optional AI-assisted readings, a third-party AI provider (OpenAI). Details are in Sections 6 and 8.</p>
+          <p><strong>Minimal processing.</strong> We process information only to operate the App (charts, optional AI-assisted readings, purchases, security, reliability, and support you start). We do not ask for access to your contacts, photo library, or precise location for chart features.</p>
+          <p><strong>Support.</strong> If you use Contact support in Settings, you may send a short diagnostic excerpt and basic device or app details only in that email. We design that excerpt not to include birth details or raw chart content unless you put them in the email body. See Section 4.</p>
           <p>If anything in this Policy conflicts with the App Store listing, disclosures within the App, or Apple’s requirements, treat the listing and Apple’s rules as controlling for distribution and reconcile any mismatch with qualified counsel.</p>
 
           <h2>1. Who we are</h2>
-          <p>This Policy applies to Michael Tan and the TianJi iOS application and its use of Google Firebase and Google Cloud as described below (and Apple for the App Store, StoreKit, and platform services). Contact details are in Section 16 at the end of this page.</p>
+          <p>This Policy applies to Michael Tan and the TianJi iOS application, including our use of service providers named in Section 8 (and Apple for the App Store and platform services). Contact details are in Section 16 at the end of this page.</p>
 
           <h2>2. Scope</h2>
-          <p>The App lets you create and manage BaZi charts using traditional computational methods, with online backend support where a feature needs it. This Policy covers: information processed on your device; information processed through our current backend (see below); and information you voluntarily email when you contact support. It does not govern websites or services operated by third parties that we do not control.</p>
-
-          <h3>Backend services (current production)</h3>
-          <p>We use only these parts of Firebase / Google Cloud for the live App:</p>
-          <div class="policy-table">
-            <table>
-              <colgroup>
-                <col style="width: 220px;" />
-                <col />
-              </colgroup>
-              <thead>
-                <tr>
-                  <th>What</th>
-                  <th>Role</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Firebase Cloud Functions</td>
-                  <td>Runs logic on the server when you call the backend (for example chart-related requests). Confidential credentials needed for those calls (such as API keys) are kept in secure secret storage on the server, not in the client app.</td>
-                </tr>
-                <tr>
-                  <td>Firestore</td>
-                  <td>Stores data the product needs on the server (for example fields related to chart limits, purchases or entitlements, sync or bookkeeping fields the server maintains). Only what the App sends and what the backend writes for these purposes is stored here.</td>
-                </tr>
-                <tr>
-                  <td>Firebase App Check</td>
-                  <td>Uses Apple App Attest on real devices (where available) so our backend can treat traffic as more likely to come from the genuine App, which reduces abuse and unauthorised API use.</td>
-                </tr>
-                <tr>
-                  <td>Firebase Anonymous Authentication</td>
-                  <td>Gives your installation a pseudonymous Firebase user ID so Cloud Functions and Firestore rules can run without you creating a username or password.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <p>We do not use Firebase Analytics, Crashlytics, Remote Config, Firebase Cloud Messaging (push), AdMob, or other Firebase products beyond what is listed above in the current release.</p>
+          <p>The App lets you create and manage BaZi charts, with online support where a feature needs it, and optional AI-assisted consultant readings. This Policy covers: information processed on your device; information processed through our online services; and information you voluntarily email when you contact support. It does not govern websites or services operated by third parties that we do not control.</p>
 
           <h2>3. Categories of information</h2>
           <p>We describe data in plain language consistent with how Apple and many laws refer to personal information or personal data. Information you enter to generate a chart (such as birth date, birth time, timezone, and gender) is personal information because it identifies or relates to a person. We use it only as described here.</p>
@@ -119,31 +81,42 @@
           <p>When you create or edit a chart, you may enter an optional label or name; date of birth, time of birth, timezone, and gender (needed for calculation); and notes stored locally with the chart. Avoid entering more sensitive data than you need; you are responsible for accuracy.</p>
 
           <h3>3.2 On your device</h3>
-          <p>We use Apple frameworks to store data on your device, including Core Data (charts and related metadata), Keychain (identifiers related to entitlements), and UserDefaults or similar (preferences such as disclaimer acceptance and language). Unless sent to our servers or exported by you, we cannot access content stored only on your device.</p>
+          <p>The App stores charts and related reading content, purchase and entitlement status, and preferences (for example language, disclaimer acceptance, and whether you allow AI reading data sharing) on your device. Unless sent to our servers or exported by you, we cannot access content stored only on your device.</p>
 
           <h3>3.3 On our servers</h3>
-          <p>When you use features that rely on our backend (for example generating a chart or keeping entitlements related to purchases in sync), the App sends requests to Cloud Functions and may read or write Firestore as the product requires. Processing may include: your Firebase Anonymous Authentication user ID and related session/App Check data needed to authorise the request; app version and an installation correlation identifier where we need it for support or consistent entitlements after reinstall; Firestore fields described above (limits, entitlements, timestamps, integrity fields); and request payloads needed for the operation. This typically includes birth inputs and/or structured BaZi data produced by calculation. Chart inputs and outputs are sensitive; we use encryption in transit (HTTPS) and restrict access using reasonable admin and cloud controls.</p>
+          <p>When you use features that rely on our online service (for example generating a chart, syncing purchases, or an AI-assisted reading), the App sends the information needed for that request. This may include a pseudonymous account ID (we do not use email/password accounts), basic app and device information needed to provide the service, chart inputs and/or structured chart results for calculation features, and for optional AI-assisted readings the reading text described in Section 6.</p>
 
-          <h3>3.4 Technical and security data</h3>
-          <p>When you use online features, Google Cloud / Firebase will process ordinary technical metadata needed to deliver the service: for example IP address, timestamps, request headers, TLS information, and operational logs tied to Cloud Functions, Firestore, and App Check.</p>
-          <p>We do not use Firebase Analytics, Crashlytics, or other Firebase products to collect product analytics or crash reports in the current App. We do not use cookies or mobile ad IDs for advertising or profiling across apps. For Google’s general practices, see <a href="https://firebase.google.com/support/privacy" rel="noopener noreferrer">Firebase Privacy and Security</a>.</p>
+          <h3>3.4 Technical data from online use</h3>
+          <p>When you use online features, our service providers may process ordinary technical metadata needed to deliver the service (for example IP address, timestamps, and operational logs). We do not use third-party analytics or crash-reporting services in the current App. We do not use cookies or mobile ad IDs for advertising or profiling across apps.</p>
 
           <h2>4. Support diagnostics and email</h2>
-          <p>You may use Settings → Contact support (when present) to open an email to us. Nothing is sent automatically. You decide whether to tap send.</p>
+          <p>You may use Settings → Contact support (when present) to open an email to us. Nothing is sent automatically. You decide whether to tap send. We do not collect your email as an App account field; we only see an address if your mail app includes it when you send.</p>
           <ul class="list">
-            <li><strong>What the email may include (by design):</strong> device and app metadata the composer adds for troubleshooting (for example device model, iOS version, app version, locale); a short excerpt of a diagnostic log from your device for recent errors.</li>
-            <li><strong>What belongs out of the log:</strong> We intend not to write raw chart JSON, birth dates or times, prompt text, or similar chart-identifying content into this log. Entries should be short technical lines (for example error domain, code, short message) so we can debug without unnecessary personal detail.</li>
+            <li><strong>What the email may include (by design):</strong> device and app details for troubleshooting (for example device model, iOS version, app version, locale); a short excerpt of a diagnostic log from your device for recent errors.</li>
+            <li><strong>What belongs out of the log:</strong> We intend not to include raw chart content, birth dates or times, or similar chart-identifying detail in this log. Entries should be short lines that help us debug without unnecessary personal detail.</li>
             <li><strong>If you need to share sensitive chart data</strong> to resolve a bug, do that only if you choose to type or attach it in the email. We will use only what you send to answer your support request, subject to normal support and legal retention.</li>
           </ul>
 
           <h2>5. How we use information</h2>
-          <p>We use information to generate, display, and store BaZi charts (including steps that run on the server in Cloud Functions when you use online features); keep anonymous sign-in, rate limits, entitlements, and records stored on the server consistent where those features exist; protect the backend (App Check / App Attest, abuse patterns); run and maintain the service (for example outages, misconfiguration, security); respond to support requests you send; and comply with law and our Terms of Use. Chart output is not medical, legal, financial, or other professional advice; see the Terms of Use and Disclaimer in the App.</p>
+          <p>We use information to:</p>
+          <ul class="list">
+            <li>Generate, display, and store BaZi and related charts and readings</li>
+            <li>Provide optional AI-assisted consultant readings after you give permission in the App (see Section 6)</li>
+            <li>Manage purchases and entitlements</li>
+            <li>Operate, secure, and improve the service</li>
+            <li>Respond to support requests you send</li>
+            <li>Comply with law and our Terms of Use</li>
+          </ul>
+          <p>Chart and AI-assisted reading output is for personal reflection only. It is not medical, legal, financial, or other professional advice; see the Terms of Use and Disclaimer in the App.</p>
 
           <h2>6. Generative AI and readings</h2>
-          <p>Today’s public App is focused on BaZi chart generation and supporting mechanics we describe above. We do not ship separate narrative “AI reading” or generative chat products in this Policy as live features. If we later turn those on in a public build, we will update this Policy and App Store privacy answers (and notice within the App where needed) in the same release window, not before promising them here.</p>
+          <p>Some consultant insights use a third-party AI service. When you use those features, we may share compressed reading text (and for some Qi Men insights, your selected question) with <strong>OpenAI</strong> so it can rewrite that text into a readable reading returned to the App.</p>
+          <p><strong>We do not send</strong> your birth date or birth time, raw chart files, or an account email address to OpenAI for those features.</p>
+          <p>Before the first share, the App explains what is sent, that a third-party AI provider (OpenAI, as named here) will receive it, and asks for your permission. You can turn this off anytime in Settings under <strong>AI reading data sharing</strong>. If you turn it off, you will be asked again before the next AI-assisted reading.</p>
+          <p>AI output can be inaccurate. The App does not offer free-form AI chat.</p>
 
           <h2>7. Legal bases (EEA / UK style)</h2>
-          <p>Where GDPR or similar laws apply, we typically rely on performance of a contract (providing the App and requested features, including paid items), legitimate interests (security, fraud and abuse prevention, reliable operation, correlating support with technical context) balanced against your rights, and consent where the law requires it for a specific processing activity. Contact us if you need jurisdiction-specific information.</p>
+          <p>Where GDPR or similar laws apply, we typically rely on performance of a contract (providing the App and requested features, including paid items), legitimate interests (security, fraud and abuse prevention, reliable operation, correlating support with technical context) balanced against your rights, and consent where the law requires it for a specific processing activity (including optional AI reading data sharing). Contact us if you need jurisdiction-specific information.</p>
 
           <h2>8. Sharing and subprocessors</h2>
           <p>We share information with recipients that help us run the App:</p>
@@ -162,11 +135,15 @@
               <tbody>
                 <tr>
                   <td>Google (Firebase / Google Cloud)</td>
-                  <td>Cloud Functions, Firestore, App Check, Anonymous Authentication, and secure secret storage on the server for credentials as described above. See <a href="https://firebase.google.com/support/privacy" rel="noopener noreferrer">Firebase Privacy and Security</a>.</td>
+                  <td>Hosts our online backend (for example chart generation and related account records). See <a href="https://firebase.google.com/support/privacy" rel="noopener noreferrer">Firebase Privacy and Security</a>.</td>
+                </tr>
+                <tr>
+                  <td>OpenAI</td>
+                  <td>Processes reading text for optional AI-assisted consultant features (see Section 6). See <a href="https://openai.com/policies/privacy-policy/" rel="noopener noreferrer">OpenAI’s Privacy Policy</a>.</td>
                 </tr>
                 <tr>
                   <td>Apple</td>
-                  <td>App distribution, App Store purchases, StoreKit, App Attest (via Apple’s platform for App Check). See <a href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer">Apple’s Privacy Policy</a>.</td>
+                  <td>App Store distribution, purchases, and related platform services. See <a href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer">Apple’s Privacy Policy</a>.</td>
                 </tr>
                 <tr>
                   <td>Professional advisers or authorities</td>
@@ -175,25 +152,26 @@
               </tbody>
             </table>
           </div>
-          <p>We do not sell personal information. We do not share it for behavioural advertising across contexts.</p>
+          <p>We require that third parties who receive user data in connection with the App provide the same or equal protection of that data as described in this Policy and required by Apple’s App Store Review Guidelines. We do not sell personal information. We do not share it for behavioural advertising across contexts.</p>
 
           <h2>9. Retention</h2>
           <p><strong>Data stored on your device</strong> stays on the device until you delete charts or app data in the App, uninstall the App, or erase the device. We cannot delete local files from our side.</p>
-          <p><strong>Data stored on the server (Firestore and related)</strong> is kept only as long as needed to provide the service, meet legal duties, resolve disputes, and enforce agreements. We may run deletion or cleanup on anonymous IDs and Firestore documents according to those needs.</p>
+          <p><strong>Data stored on the server</strong> is kept only as long as needed to provide the service, meet legal duties, resolve disputes, and enforce agreements.</p>
           <p><strong>Support emails</strong> may be kept for a reasonable period to finish the thread and for internal quality, unless law requires longer retention.</p>
 
           <h2>10. Security</h2>
-          <p>We use measures appropriate to the risk: HTTPS, access controls on cloud resources, Firebase App Check to reduce abuse, and secure secret storage on the server so confidential credentials are not embedded in the client app for server operations. No storage or transmission method is completely secure.</p>
+          <p>We use measures appropriate to the risk to protect personal data in transit and at rest, and to limit access to our systems. No storage or transmission method is completely secure.</p>
 
           <h2>11. Children</h2>
           <p>The App is not directed at children under 13 (or the higher age required where you live). We do not knowingly collect personal information from children. If you believe we have, contact us and we will take appropriate steps.</p>
 
           <h2>12. International transfers</h2>
-          <p>Data may be processed in the United States and other regions where Google Cloud operates. Where required, we rely on appropriate safeguards (for example standard contractual clauses).</p>
+          <p>Data may be processed in the United States and other countries where our service providers operate (including Google and, for AI-assisted readings, OpenAI). Where required, we rely on appropriate safeguards (for example standard contractual clauses).</p>
 
           <h2>13. Your rights and choices</h2>
-          <p><strong>Data stored on your device:</strong> Delete charts or reset data in the App, or uninstall. That removes local copies from your device; it does not, by itself, erase Firestore rows your user ID may still have.</p>
-          <p><strong>Data stored on the server:</strong> Email <a href="mailto:tianjisupport@gmail.com">tianjisupport@gmail.com</a> from an address you can receive mail at. Describe your request (delete my records stored on the server, access, etc.). Because we use anonymous Firebase accounts, we may ask for reasonable information (for example your support email thread, approximate purchase date, or other non-sensitive cues) to match your request to the right anonymous ID. Where deletion is possible, we will delete or anonymise relevant Firestore records and related server data we control, subject to legal retention needs.</p>
+          <p><strong>AI reading data sharing:</strong> Turn this off in Settings to withdraw permission for AI-assisted readings.</p>
+          <p><strong>Data stored on your device:</strong> Delete charts or reset data in the App, or uninstall. That removes local copies from your device; it does not, by itself, erase server records that may still exist for your installation.</p>
+          <p><strong>Data stored on the server:</strong> Email <a href="mailto:tianjisupport@gmail.com">tianjisupport@gmail.com</a> from an address you can receive mail at. Describe your request (delete my records stored on the server, access, etc.). Because accounts are anonymous (no email login), we may ask for reasonable information (for example your support email thread, approximate purchase date, or other non-sensitive cues) to match your request to the right records. Where deletion is possible, we will delete or anonymise relevant server data we control, subject to legal retention needs.</p>
           <p>Depending on where you live, you may have other rights (access, correction, export, object, restrict processing, withdraw consent where applicable). On iOS you can uninstall the App and use system privacy and network settings Apple provides. We respond within the time applicable law requires where that applies.</p>
 
           <h2>14. California and other U.S. states (summary)</h2>
