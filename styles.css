@@ -76,10 +76,10 @@ a{color:inherit;text-decoration:none}
   filter:blur(6px)
 }
 .phone{
-  position:relative;z-index:2;width:min(360px, 72vw);border-radius:40px;overflow:hidden;border:10px solid #1b1b1e;
+  position:relative;z-index:2;width:min(360px, 72vw);aspect-ratio:9/19.5;border-radius:40px;overflow:hidden;border:10px solid #1b1b1e;
   box-shadow:0 30px 60px rgba(13,7,4,.42);background:#111
 }
-.phone img{display:block;width:100%;height:auto}
+.phone img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:50% 18%}
 
 .section{padding:44px 0}
 .paper-card{
@@ -243,17 +243,35 @@ a{color:inherit;text-decoration:none}
   width:min(88px, 18vw);
   max-width:none;
 }
+.coming-soon-banner__art--trio{
+  width:min(280px, 50vw);
+  min-height:120px;
+  gap:2px;
+  flex-wrap:nowrap;
+}
+.coming-soon-art-img--trio{
+  width:min(78px, 15vw);
+  max-width:none;
+}
 .coming-soon-banner__main{flex:1;min-width:0}
 .coming-soon-badge{
   display:inline-block;
+  margin-bottom:4px;
   padding:6px 14px;
-  border:1px solid rgba(197,160,89,.55);
+  border:1px solid rgba(255,248,220,.75);
   border-radius:999px;
   font-size:11px;
-  font-weight:600;
+  font-weight:700;
   letter-spacing:.14em;
   text-transform:uppercase;
-  color:var(--coming-gold-bright);
+  color:#120d06;
+  background:
+    linear-gradient(120deg, rgba(255,255,255,.35) 0%, transparent 40%),
+    linear-gradient(180deg,#fff0b0 0%,#f0d878 38%,#e8c56a 62%,#c5a059 100%);
+  box-shadow:
+    0 0 0 1px rgba(212,175,55,.35),
+    0 0 22px rgba(212,175,55,.4),
+    0 6px 18px rgba(0,0,0,.28);
 }
 
 /* Launched celebration badge (feature hero) */
@@ -457,6 +475,9 @@ a{color:inherit;text-decoration:none}
   gap:18px;
   max-width:880px;
   margin:0 auto;
+}
+.upcoming-features-grid--four{
+  max-width:1080px;
 }
 .upcoming-feature-card{
   display:flex;
@@ -757,7 +778,7 @@ body.page-feature .site-header{
 .feature-showcase{
   position:relative;
   display:grid;
-  grid-template-columns:minmax(0,200px) minmax(0,1fr);
+  grid-template-columns:minmax(0,240px) minmax(0,1fr);
   gap:20px 28px;
   align-items:center;
   max-width:880px;
@@ -899,6 +920,13 @@ body.page-feature .site-header{
   max-height:min(160px, 28vh);
   object-fit:contain;
   filter:drop-shadow(0 12px 24px rgba(0,0,0,.4));
+}
+.feature-showcase__logos--trio{
+  gap:8px;
+}
+.feature-showcase__logos--trio img{
+  width:min(78px, 18vw);
+  max-height:min(130px, 24vh);
 }
 .feature-showcase__label{
   margin:0 0 4px;
@@ -1070,6 +1098,7 @@ a.features-catalog-card:hover{
   filter:drop-shadow(0 12px 24px rgba(0,0,0,.4));
 }
 .features-catalog-card--highlight .features-catalog-card__media img{width:min(100px, 38%)}
+.features-catalog-card--highlight .features-catalog-card__media--logos img{width:min(64px, 28%);max-height:110px}
 .features-catalog-card__media--logo{
   align-items:flex-end;
   min-height:140px;
@@ -1080,6 +1109,17 @@ a.features-catalog-card:hover{
   max-height:160px;
   object-fit:contain;
   filter:drop-shadow(0 12px 24px rgba(0,0,0,.4));
+}
+.features-catalog-card__media--logos{
+  align-items:flex-end;
+  justify-content:center;
+  gap:6px;
+  min-height:140px;
+  padding:18px 12px 0;
+}
+.features-catalog-card__media--logos img{
+  width:min(64px, 28%);
+  max-height:110px;
 }
 .features-catalog-card__media--placeholder{
   align-items:center;
@@ -1494,8 +1534,11 @@ body.page-feature .footer-social a:hover{color:#fff8e8}
   .coming-soon-banner__art{width:min(120px, 32vw);min-height:120px}
   .coming-soon-banner__art--duo{width:min(180px, 48vw);min-height:100px}
   .coming-soon-art-img--duo{width:min(72px, 22vw)}
+  .coming-soon-banner__art--trio{width:min(240px, 72vw);min-height:96px}
+  .coming-soon-art-img--trio{width:min(68px, 20vw)}
   .coming-soon-banner__main{text-align:center}
-  .coming-soon-banner__main .launched-badge{margin-left:auto;margin-right:auto}
+  .coming-soon-banner__main .launched-badge,
+  .coming-soon-banner__main .coming-soon-badge{margin-left:auto;margin-right:auto}
   .coming-soon-lede{margin-left:auto;margin-right:auto}
   .coming-soon-rule{margin-left:auto;margin-right:auto}
   .coming-soon-features{justify-content:center}
@@ -1520,6 +1563,7 @@ body.page-feature .footer-social a:hover{color:#fff8e8}
   .feature-showcase__scroll{margin-left:-12px}
   .feature-showcase__logos{gap:12px}
   .feature-showcase__logos img{width:min(88px, 26vw);max-height:140px}
+  .feature-showcase__logos--trio img{width:min(64px, 20vw);max-height:110px}
   .feature-showcase__lede{margin-left:auto;margin-right:auto}
   .feature-showcase__steps{
     text-align:left;

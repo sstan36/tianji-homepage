@@ -4,7 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Features | TianJi</title>
-  <meta name="description" content="Explore TianJi features: BaZi Charts, Past Life Insight, Wealth Insight, and Health Insight." />
+  <meta name="description" content="Explore TianJi features: BaZi Charts, Past Life Insight, Wealth Insight, Health Insight, and coming soon Qi Men - Work, Love and Decision." />
+  <link rel="icon" href="assets/app-icon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/app-icon.png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="page-feature">
@@ -28,40 +30,41 @@
     <div class="container features-hub-hero__inner">
       <p class="features-hub-eyebrow">TianJi app</p>
       <h1 class="features-hub-title">Everything in TianJi</h1>
-      <p class="features-hub-lede">Browse every live module and explore each feature in depth, all in one place.</p>
+      <p class="features-hub-lede">Browse what’s live today, see what’s coming next, and explore each feature in depth, all in one place.</p>
     </div>
   </section>
 
   <section class="section features-spotlight" aria-labelledby="features-spotlight-heading">
     <div class="container">
       <article class="feature-showcase">
-        <span class="feature-showcase__ribbon feature-showcase__ribbon--launched" aria-hidden="true">Launched</span>
+        <span class="feature-showcase__ribbon feature-showcase__ribbon--soon" aria-hidden="true">Coming soon</span>
         <div class="feature-showcase__visual">
           <div class="feature-showcase__glow" aria-hidden="true"></div>
-          <div class="feature-showcase__logos">
-            <img src="assets/wealth-logo.png" width="120" height="120" alt="" decoding="async" loading="lazy" />
-            <img src="assets/health-logo.png" width="120" height="120" alt="" decoding="async" loading="lazy" />
+          <div class="feature-showcase__logos feature-showcase__logos--trio">
+            <img src="assets/career-logo.png" width="120" height="120" alt="" decoding="async" loading="lazy" />
+            <img src="assets/love-logo.png" width="120" height="120" alt="" decoding="async" loading="lazy" />
+            <img src="assets/decision-logo.png" width="120" height="120" alt="" decoding="async" loading="lazy" />
           </div>
         </div>
         <div class="feature-showcase__copy">
-          <p class="feature-showcase__label">Just launched</p>
-          <h2 id="features-spotlight-heading" class="feature-showcase__title">Wealth &amp; Health Insight</h2>
-          <p class="feature-showcase__lede">Two new TianJi modules are live today. Each one reads your BaZi chart through a focused lens: prosperity on one side, balance and vitality on the other.</p>
+          <p class="feature-showcase__label">On the horizon</p>
+          <h2 id="features-spotlight-heading" class="feature-showcase__title">Qi Men - Work, Love &amp; Decision</h2>
+          <p class="feature-showcase__lede">A major new system for timing and personalised guidance, layered onto your existing BaZi chart. Three focused questions: work, love, and the decisions in front of you.</p>
           <ol class="feature-showcase__steps">
             <li>
               <span class="feature-showcase__step-num" aria-hidden="true">1</span>
-              <span class="feature-showcase__step-text"><strong>Wealth Insight</strong> reveals natal wealth capacity, timing, and money patterns</span>
+              <span class="feature-showcase__step-text"><strong>Work</strong> reveals career timing and the hours that support your path</span>
             </li>
             <li>
               <span class="feature-showcase__step-num" aria-hidden="true">2</span>
-              <span class="feature-showcase__step-text"><strong>Health Insight</strong> explores organ balance, stamina, and long-cycle pacing</span>
+              <span class="feature-showcase__step-text"><strong>Love</strong> explores relationship themes through the same personalised chart</span>
             </li>
             <li>
               <span class="feature-showcase__step-num" aria-hidden="true">3</span>
-              <span class="feature-showcase__step-text">Both built with the same <strong>structured, readable</strong> TianJi experience</span>
+              <span class="feature-showcase__step-text"><strong>Decision</strong> helps you choose with timing, not guesswork, on your BaZi foundation</span>
             </li>
           </ol>
-          <a class="feature-showcase__cta" href="#wealth">Explore Wealth &amp; Health <span aria-hidden="true">↓</span></a>
+          <a class="feature-showcase__cta" href="#coming-soon">See coming soon features <span aria-hidden="true">↓</span></a>
         </div>
       </article>
     </div>
@@ -70,8 +73,20 @@
   <section class="section features-catalog" aria-labelledby="features-catalog-heading">
     <div class="container">
       <h2 id="features-catalog-heading" class="features-catalog-heading">All features</h2>
-      <p class="features-catalog-lede">Tap any feature for the full overview.</p>
-      <div class="features-catalog-grid features-catalog-grid--four">
+      <p class="features-catalog-lede">Tap a live feature for the full overview. Coming soon modules are listed first.</p>
+      <div class="features-catalog-grid">
+        <article id="coming-soon" class="features-catalog-card features-catalog-card--soon features-catalog-card--highlight">
+          <div class="features-catalog-card__media features-catalog-card__media--logos">
+            <img src="assets/career-logo.png" width="80" height="80" alt="" decoding="async" loading="lazy" />
+            <img src="assets/love-logo.png" width="80" height="80" alt="" decoding="async" loading="lazy" />
+            <img src="assets/decision-logo.png" width="80" height="80" alt="" decoding="async" loading="lazy" />
+          </div>
+          <div class="features-catalog-card__body">
+            <span class="feature-status feature-status--soon">Coming soon</span>
+            <h3 class="features-catalog-card__title">Qi Men - Work, Love &amp; Decision</h3>
+            <p class="features-catalog-card__desc">Timing and personalised guidance for work, love, and decisions, read through your BaZi chart.</p>
+          </div>
+        </article>
         <a class="features-catalog-card" href="#bazi-charts">
           <div class="features-catalog-card__media">
             <img src="assets/shot-chart.png" width="260" height="520" alt="" decoding="async" loading="lazy" />
@@ -85,7 +100,7 @@
         </a>
         <a class="features-catalog-card" href="#past-life">
           <div class="features-catalog-card__media">
-            <img src="assets/past-life.png" width="200" height="300" alt="" decoding="async" loading="lazy" />
+            <img src="assets/past-life.png" width="200" height="200" alt="" decoding="async" loading="lazy" />
           </div>
           <div class="features-catalog-card__body">
             <span class="feature-status feature-status--live">Live</span>
@@ -94,23 +109,23 @@
             <span class="features-catalog-card__link">Explore <span aria-hidden="true">›</span></span>
           </div>
         </a>
-        <a class="features-catalog-card features-catalog-card--highlight" href="#wealth">
+        <a class="features-catalog-card" href="#wealth">
           <div class="features-catalog-card__media features-catalog-card__media--logo">
             <img src="assets/wealth-logo.png" width="120" height="120" alt="" decoding="async" loading="lazy" />
           </div>
           <div class="features-catalog-card__body">
-            <span class="feature-status feature-status--launched">Launched</span>
+            <span class="feature-status feature-status--live">Live</span>
             <h3 class="features-catalog-card__title">Wealth Insight</h3>
             <p class="features-catalog-card__desc">Natal wealth capacity, timing, and money patterns from your BaZi chart.</p>
             <span class="features-catalog-card__link">Explore <span aria-hidden="true">›</span></span>
           </div>
         </a>
-        <a class="features-catalog-card features-catalog-card--highlight" href="#health">
+        <a class="features-catalog-card" href="#health">
           <div class="features-catalog-card__media features-catalog-card__media--logo">
             <img src="assets/health-logo.png" width="120" height="120" alt="" decoding="async" loading="lazy" />
           </div>
           <div class="features-catalog-card__body">
-            <span class="feature-status feature-status--launched">Launched</span>
+            <span class="feature-status feature-status--live">Live</span>
             <h3 class="features-catalog-card__title">Health Insight</h3>
             <p class="features-catalog-card__desc">Organ balance, stamina, and life-cycle pacing written into your chart.</p>
             <span class="features-catalog-card__link">Explore <span aria-hidden="true">›</span></span>
@@ -440,8 +455,8 @@
           <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="1.4" opacity=".55"/><path d="M24 10c-4.4 0-8 3.2-8 7.2V22l-2 2v2h20v-2l-2-2v-4.8C32 13.2 28.4 10 24 10z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M19 34h10a3 3 0 01-6 0h-4z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
         </div>
         <div class="feature-waitlist-bar__copy">
-          <p class="feature-waitlist-bar__head">All features live in the TianJi app.</p>
-          <p class="feature-waitlist-bar__sub">Download on the App Store for BaZi Charts, Past Life Insight, Wealth Insight, and Health Insight.</p>
+          <p class="feature-waitlist-bar__head">Qi Men is coming soon to TianJi.</p>
+          <p class="feature-waitlist-bar__sub">Download today for BaZi Charts, Past Life Insight, Wealth Insight, and Health Insight. Work, Love, and Decision timing follows.</p>
         </div>
         <a class="feature-notify-btn" href="https://apps.apple.com/us/app/tianji-bazi-destiny/id6761753338" target="_blank" rel="noopener noreferrer">Download on the App Store <span aria-hidden="true">›</span></a>
       </div>
